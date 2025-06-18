@@ -52,9 +52,9 @@
 
             encoder_binding_left_cw  = <&mkwhl_down>;
             encoder_binding_left_ccw = <&mkwhl_up>;
-            encoder_binding_left_btn = <&mkp MBTN_MIDDLE>;
+            encoder_binding_left_btn = <&mkp MCLK>;
 
-            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp MBTN_LEFT>;
+            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp LCLK>;
         };
 
         lower_layer {
@@ -77,7 +77,11 @@
                                                                 &kp A      &kp B     &kp C      &kp D      &kp E
             >;
 
-            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp MBTN_RIGHT>;
+            encoder_binding_left_cw  = <&mkwhl_down>;
+            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_btn = <&mkp MCLK>;
+
+            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp RCLK>;
         };
 
         raise_layer {
@@ -99,11 +103,11 @@
                                                                                   &kp A      &kp B     &kp C     &kp D      &kp E
             >;
 
-            encoder_binding_left_cw  = <&none>;
-            encoder_binding_left_ccw = <&none>;
-            encoder_binding_left_btn = <&none>;
+            encoder_binding_left_cw  = <&mkwhl_down>;
+            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_btn = <&mkp MCLK>;
             
-            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp MBTN_LEFT>;
+            sensor-bindings = <&mkx 20 &mkx -20 &mky -20 &mky 20 &mkp LCLK>;
         };
 
         adjust_layer {
