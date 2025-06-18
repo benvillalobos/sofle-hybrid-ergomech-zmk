@@ -9,11 +9,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+#define MOUSE_SPEED 40
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -49,7 +51,11 @@
                                                                &kp ENTER  &kp RIGHT  &kp UP_ARROW  &kp LEFT  &kp DOWN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            encoder_binding_left_cw  = <&mkwhl_down>;
+            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_btn = <&mkp MBTN_MIDDLE>;
+
+            sensor-bindings = <&mkx MOUSE_SPEED &mkx -MOUSE_SPEED &mky -MOUSE_SPEED &mky MOUSE_SPEED &mkp MBTN_LEFT>;
         };
 
         lower_layer {
@@ -72,7 +78,7 @@
                                                                 &kp A      &kp B     &kp C      &kp D      &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&mkx MOUSE_SPEED &mkx -MOUSE_SPEED &mky -MOUSE_SPEED &mky MOUSE_SPEED &mkp MBTN_RIGHT>;
         };
 
         raise_layer {
@@ -94,7 +100,11 @@
                                                                                   &kp A      &kp B     &kp C     &kp D      &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            encoder_binding_left_cw  = <&none>;
+            encoder_binding_left_ccw = <&none>;
+            encoder_binding_left_btn = <&none>;
+            
+            sensor-bindings = <&mkx MOUSE_SPEED &mkx -MOUSE_SPEED &mky -MOUSE_SPEED &mky MOUSE_SPEED &mkp MBTN_LEFT>;
         };
 
         adjust_layer {
