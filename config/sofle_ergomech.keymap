@@ -58,7 +58,7 @@
                 <&mkx>,
                 <&mky>,
                 <&mky 20>,
-                <&mkp MBTN_LEFT>;
+                <&mkp LCLK>;
         };
 
         lower_layer {
@@ -89,7 +89,7 @@
                 <&mkx>,
                 <&mky>,
                 <&mky 20>,
-                <&mkp MBTN_RIGHT>;
+                <&mkp RCLK>;
         };
 
         raise_layer {
@@ -119,7 +119,7 @@
                 <&mkx>,
                 <&mky>,
                 <&mky 20>,
-                <&mkp MBTN_LEFT>;
+                <&mkp LCLK>;
         };
 
         adjust_layer {
