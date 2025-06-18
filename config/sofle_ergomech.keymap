@@ -50,8 +50,8 @@
                                                                &mkp LCLK  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN
             >;
 
-            encoder_binding_left_cw = <&mkwhl_down>;
-            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_cw = <&mkwhl MK_WHEEL_DOWN>;
+            encoder_binding_left_ccw = <&&mkwhl MK_WHEEL_UP>;
             encoder_binding_left_btn = <&mkp MCLK>;
             sensor-bindings =
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
@@ -81,8 +81,8 @@
                                                                      &mkp RCLK  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN
             >;
 
-            encoder_binding_left_cw = <&mkwhl_down>;
-            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_cw = <&mkwhl MK_WHEEL_DOWN>;
+            encoder_binding_left_ccw = <&mkwhl MK_WHEEL_UP>;
             encoder_binding_left_btn = <&mkp MCLK>;
             sensor-bindings =
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
@@ -111,8 +111,8 @@
                                                                                   &mkp LCLK  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN
             >;
 
-            encoder_binding_left_cw = <&mkwhl_down>;
-            encoder_binding_left_ccw = <&mkwhl_up>;
+            encoder_binding_left_cw = <&mkwhl MK_WHEEL_DOWN>;
+            encoder_binding_left_ccw = <&mkwhl MK_WHEEL_UP>;
             encoder_binding_left_btn = <&mkp MCLK>;
             sensor-bindings =
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>,
